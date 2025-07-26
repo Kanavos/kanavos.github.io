@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tap Surprise</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    #tapButton {
+      padding: 20px 40px;
+      font-size: 32px;
+      background-color: #fff;
+      border: none;
+      border-radius: 15px;
+      color: #ff4d6d;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #tapButton:hover {
+      background-color: #ffe6e9;
+    }
+    #message {
+      display: none;
+      font-size: 36px;
+      color: #fff;
+      margin-top: 20px;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <button id="tapButton">Tap</button>
+    <div id="message">Τι κάνεις ρε μεγάλε ❤️</div>
+  </div>
+
+  <script>
+    document.getElementById("tapButton").addEventListener("click", function() {
+      document.getElementById("tapButton").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
